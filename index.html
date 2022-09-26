@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FileUpload</title>
+</head>
+<body>
+    <form action="http://localhost:80/upload" method="post" enctype="multipart/form-data">
+        <input id="fileupload" type="file" name="fileupload"/>
+        <button id="upload-button" onclick="uploadFile()">Upload</button>
+    </form>
+</body>
+<script>
+    async function uploadFile(){
+        let formData = new FormData();
+        formData.append("fileupload", fileupload.files[0]);
+        await fetch('http://localhost/upload', {
+            method: "POST",
+            body: formData
+        })
+    }
+</script>
+</html>

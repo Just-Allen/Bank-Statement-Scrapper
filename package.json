@@ -1,0 +1,13 @@
+{
+    "scripts": {
+    "start": "node upload.js"
+  },
+  "dependencies": {
+    "formidable": "^2.0.1",
+    "fs": "^0.0.1-security",
+    "html": "^1.0.0",
+    "http": "^0.0.1-security",
+    "node": "^18.9.0",
+    "pdf2table": "^0.0.2"
+  }
+}
